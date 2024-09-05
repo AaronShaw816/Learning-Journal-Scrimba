@@ -1,0 +1,256 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 400px;
+}
+
+/* --------HOME-------- 
+   --------------------*/
+
+h1 {
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    margin-bottom: 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    min-width: 200px;
+}
+
+.logo img {
+    height: 35px;
+    width: 35px;
+}
+
+.home-aboutme {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+
+section {
+    background-image: url("./images/coding-computer.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+    padding-top: 4em;
+    padding-left: ;
+    padding: 4em 4% 2em 4%;
+}
+
+section h1 {
+    font-size: 1.9em;
+    color: white;
+    text-shadow: 0px 0px 6px black;
+}
+
+section p {
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+
+main,
+recent-posts {
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas: 
+        ".... .... ...."
+        ".... one ...."
+        ".... two ...."
+        ".... thr ...."
+        ".... .... ....";
+        gap: 2.5em 1em;
+}
+
+main img {
+    width: 100%;
+}
+
+main p {
+    color: #505050;
+}
+
+
+/* --------BLOGS-------- */
+.blog-one {
+    grid-area: one;
+}
+
+.blog-two {
+    grid-area: two;
+}
+
+.blog-three {
+    grid-area: thr;
+}
+
+.blog-four {
+    grid-area: fou;
+    display: none;
+}
+
+.blog-five {
+    grid-area: fiv;
+    display: none;
+}
+
+.blog-six {
+    grid-area: six;
+    display: none;
+}
+
+.blog-one,
+.blog-two,
+.blog-three {
+    border-bottom: 1px solid gray;
+}
+
+
+
+.view-more {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.view-more a {
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75em;
+    color: white;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    background-color: black;
+}
+
+footer h4 {
+    color: #ECECEC;
+    margin-bottom: 0px;
+}
+
+footer p {
+    color: #D7D7D7;
+    margin-top: .25em;
+}
+
+/* --------ABOUT ME-------- */
+
+intro img {
+    margin: 1em;
+    width: 50%;
+    min-width: 100px;
+    border-radius: 50%;
+    background-color: #dda15e;
+}
+
+intro h1 {
+    font-size: 2em;
+}
+
+intro p {
+    padding-bottom: 1.8rem;
+}
+
+intro h1, 
+intro p,
+info h3,
+info p {
+    margin: 1rem;
+}
+
+info h3 {
+    padding: 1rem 0px;
+}
+
+.recent-posts {
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+/* -------- MEDIA QUERIES -------- */
+
+@media(min-width: 500px){
+    intro img {
+        width: 25%;
+        min-width: 240px;
+        margin-left: 5%;
+    }
+    intro div {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    info h3,
+    info p {
+        padding: .5rem 5%;
+    }
+    main{
+    grid-template-columns: 1em 1fr 1fr 1fr 1em;
+    grid-template-areas: 
+        "... ... ... ... ..."
+        "... one two thr ..."
+        "... ... ... ... ..."
+        ;
+        gap: 2.5em 1em;
+    }
+    .blog-four,
+    .blog-five,
+    .blog-six {
+        display: block;
+    }
+    .main-page {
+        grid-template-columns: 1em 1fr 1fr 1fr 1em;
+    grid-template-areas: 
+        "... ... ... ... ..."
+        "... one two thr ..."
+        "... fou fiv six ..."
+        "... ... ... ... ..."
+        ;
+        gap: 2.5em 1em;
+    }
+}
+
+@media(min-width: 870px){
+    /* -------- ABOUT ME -------- */
+    intro {
+        display: flex;
+        flex-direction: row;
+    }
+    intro div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    intro h1 {
+        margin-bottom: 0px;
+    }
+    
+    /* --------MAIN-------- */
+    section {
+        height: 20rem;
+    }
+    .date {
+        margin-top: 10rem;
+    }
+}
